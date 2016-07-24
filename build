@@ -204,7 +204,7 @@ def build_uboot_one_board(boardname):
     else:
         config_target_suffix = '_defconfig'
     run(uboot_dir, 'make O=' + build_uboot_dir + ' ' + boardname + config_target_suffix)
-    run(uboot_dir, 'make O=' + build_uboot_dir + ' -s ' + makejobs)
+    run(uboot_dir, 'make O=' + build_uboot_dir + ' ' + makejobs)
 
     import_uboot_one_board(boardname, build_uboot_dir)
 
